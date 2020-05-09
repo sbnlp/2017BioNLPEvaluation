@@ -747,6 +747,9 @@ def writeSet(documents, output, resultFileTag="a2", debug=False, writeExtra=Fals
     if os.path.exists(outdir):
         shutil.rmtree(outdir)
 
+    if not os.path.exists(outdir):
+        os.makedirs(outdir)
+
 #    if not validate:
 #        print "Warning! No validation."
     for doc in documents:
